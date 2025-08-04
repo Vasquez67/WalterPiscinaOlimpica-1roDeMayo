@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galería - Piscina Olímpica</title>
+    <link rel="stylesheet" href="galeria.css">
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Partículas animadas -->
+    <div class="particles" id="particles"></div>
+
+    <nav class="navbar">
+      <div class="navbar-container">
+        <span class="navbar-title">Navegación</span>
+         <div class="navbar-buttons">
+  <button data-page="inicio" class="nav-btn">
+    <img src="Imagenes/31.png" alt="Inicio" style="height: 1.5rem; vertical-align: middle; margin-right: 0.5rem;">
+    Inicio
+  </button>
+  <button data-page="modelado_3D" class="nav-btn">
+    <img src="Imagenes/26.png" alt="Modelo 3D" style="height: 1.5rem; vertical-align: middle; margin-right: 0.5rem;">
+    Modelo 3D
+  </button>
+  <button data-page="ubicacion" class="nav-btn">
+    <img src="Imagenes/28.png" alt="Ubicación" style="height: 1.5rem; vertical-align: middle; margin-right: 0.5rem;">
+    Ubicación
+  </button>
+  <button data-page="historia" class="nav-btn">
+    <img src="Imagenes/30.png" alt="Historia" style="height: 1.5rem; vertical-align: middle; margin-right: 0.5rem;">
+    Historia
+  </button>
+  <button data-page="galeria" class="nav-btn">
+    <img src="Imagenes/27.png" alt="Galería" style="height: 1.5rem; vertical-align: middle; margin-right: 0.5rem;">
+    Galería
+  </button>
+  <button data-page="contacto" class="nav-btn">
+    <img src="Imagenes/29.png" alt="Contacto" style="height: 1.5rem; vertical-align: middle; margin-right: 0.5rem;">
+    Contacto
+  </button>
+</div>
+      </div>
+    </nav>
+
+    <main class="main-content">
+      <h2>Galería Olímpica</h2>
+      <p class="subtitle">
+        Revive los momentos históricos y las vistas más impresionantes de nuestra piscina olímpica.
+      </p>
+      
+      <div class="gallery-container" id="gallery">
+        <!-- Las imágenes se insertarán aquí dinámicamente -->
+      </div>
+      
+      <!-- Modal para vista ampliada -->
+      <div class="modal" id="imageModal">
+        <span class="close-btn" id="closeModal">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div class="caption" id="modalCaption"></div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <img src="https://cdn.glitch.global/6560f157-1f37-4242-9d97-edc2228dad93/19.jpg?v=1748299003720" 
+           alt="Imagen de fondo" 
+           class="footer-bg-image">
+      <div class="footer-container">
+        <p>
+          &copy; 2025 Piscina Olímpica 1ro de Mayo - Catavi. Todos los derechos
+          reservados.
+        </p>
+        <p><strong>UNSXX - Walter Inca Vasquez</strong></p>
+        <div class="footer-links">
+          <a href="#">
+            <img src="https://cdn.glitch.global/6560f157-1f37-4242-9d97-edc2228dad93/15f.png?v=1748298580486"
+                 alt="Facebook" width="20" />
+            Facebook
+          </a>
+          <a href="#">
+            <img src="https://cdn.glitch.global/6560f157-1f37-4242-9d97-edc2228dad93/16i.png?v=1748298587348"
+                 alt="Instagram" width="20" />
+            Instagram
+          </a>
+          <a href="#">
+            <img src="https://cdn.glitch.global/6560f157-1f37-4242-9d97-edc2228dad93/17y.png?v=1748298594309"
+                 alt="YouTube" width="20" />
+            YouTube
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="galeria.js"></script>
+  </body>
+</html>

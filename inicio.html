@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Piscina Olímpica 1ro de Mayo</title>
+    <link rel="stylesheet" href="inicio.css">
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Partículas animadas -->
+    <div class="particles" id="particles"></div>
+
+    <header class="hero-header">
+      <div class="hero-overlay">
+        <div class="hero-title-container">
+          <img
+            src="Imagenes/22.avif"
+            alt="Logo Piscina"
+            class="hero-logo"
+          />
+          <h1>Piscina Olímpica 1ro de Mayo</h1>
+        </div>
+        <p>Catavi - Un ícono del deporte y la historia</p>
+        <a href="#modelo3d" class="hero-button">Explorar en 3D</a>
+      </div>
+    </header>
+
+    <nav class="navbar" id="navbar">
+      <div class="navbar-container">
+        <span class="navbar-title">Navegación</span>
+        <div class="navbar-buttons">
+  <button data-page="inicio" class="nav-btn">
+    <img src="Imagenes/31.png" alt="Inicio" style="height: 1.5rem; vertical-align: middle; margin-right: 0.5rem;">
+    Inicio
+  </button>
+  <button data-page="modelado_3D" class="nav-btn">
+    <img src="Imagenes/26.png" alt="Modelo 3D" style="height: 1.5rem; vertical-align: middle; margin-right: 0.5rem;">
+    Modelo 3D
+  </button>
+  <button data-page="ubicacion" class="nav-btn">
+    <img src="Imagenes/28.png" alt="Ubicación" style="height: 1.5rem; vertical-align: middle; margin-right: 0.5rem;">
+    Ubicación
+  </button>
+  <button data-page="historia" class="nav-btn">
+    <img src="Imagenes/30.png" alt="Historia" style="height: 1.5rem; vertical-align: middle; margin-right: 0.5rem;">
+    Historia
+  </button>
+  <button data-page="galeria" class="nav-btn">
+    <img src="Imagenes/27.png" alt="Galería" style="height: 1.5rem; vertical-align: middle; margin-right: 0.5rem;">
+    Galería
+  </button>
+  <button data-page="contacto" class="nav-btn">
+    <img src="Imagenes/29.png" alt="Contacto" style="height: 1.5rem; vertical-align: middle; margin-right: 0.5rem;">
+    Contacto
+  </button>
+</div>
+
+      </div>
+    </nav>
+
+    <!-- Sección del Modelo 3D -->
+    <section class="model-3d-section" id="modelo3d">
+      <h2 style="text-align: center; color: white; font-size: 2.5rem; margin-bottom: 2rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
+  <img src="Imagenes/25.png" alt="Piscina" style="height: 5rem; vertical-align: middle; margin-right: 0.5rem;">
+  Piscina Olímpica - Modelo 3D Interactivo
+</h2>
+
+      
+      <div class="model-3d-container" id="threejs-container">
+        <div class="loading-screen" id="loadingScreen">
+          <div class="loading-spinner"></div>
+          <p>Cargando modelo 3D de la piscina...</p>
+        </div>
+      </div>
+      
+      <div class="model-controls">
+        <button class="control-btn" id="toggleAnimation">⏸️ Pausar Rotación</button>
+        <button class="control-btn" id="changeView">📹 Vista Aérea</button>
+        <button class="control-btn" id="toggleWireframe">🔲 Wireframe</button>
+        <button class="control-btn" id="resetCamera">🎯 Resetear Vista</button>
+        <button class="control-btn" id="toggleLights">💡 Iluminación</button>
+      </div>
+
+      <div class="pool-stats">
+        <div class="stat-card">
+          <span class="stat-number">50m</span>
+          <div class="stat-label">Longitud Olímpica</div>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">25m</span>
+          <div class="stat-label">Ancho Estándar</div>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">8</span>
+          <div class="stat-label">Carriles de Competición</div>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">2m</span>
+          <div class="stat-label">Profundidad Media</div>
+        </div>
+      </div>
+    </section>
+
+    <main id="contenido" class="main-content">
+      <h2>Bienvenido al sitio oficial</h2>
+      <p>
+        La Piscina Olímpica 1ro de Mayo es un símbolo histórico y deportivo de
+        Catavi. Explora su historia, observa su modelo 3D, revive sus mejores
+        momentos en la galería y comunícate con nosotros para conocer más sobre
+        este patrimonio local.
+      </p>
+    </main>
+
+    <footer class="footer">
+      <img src="https://cdn.glitch.global/6560f157-1f37-4242-9d97-edc2228dad93/19.jpg?v=1748299003720" 
+           alt="Imagen de fondo" 
+           class="footer-bg-image">
+      <div class="footer-container">
+        <p>
+          &copy; 2025 Piscina Olímpica 1ro de Mayo - Catavi. Todos los derechos
+          reservados.
+        </p>
+        <p><strong>UNSXX - Walter Inca Vasquez</strong></p>
+        <div class="footer-links">
+          <a href="#">
+            <img src="https://cdn.glitch.global/6560f157-1f37-4242-9d97-edc2228dad93/15f.png?v=1748298580486"
+                 alt="Facebook" width="20" />
+            Facebook
+          </a>
+          <a href="#">
+            <img src="https://cdn.glitch.global/6560f157-1f37-4242-9d97-edc2228dad93/16i.png?v=1748298587348"
+                 alt="Instagram" width="20" />
+            Instagram
+          </a>
+          <a href="#">
+            <img src="https://cdn.glitch.global/6560f157-1f37-4242-9d97-edc2228dad93/17y.png?v=1748298594309"
+                 alt="YouTube" width="20" />
+            YouTube
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Three.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="inicio.js"></script>
+  </body>
+</html>

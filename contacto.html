@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Únete a la Historia | Piscina Olímpica 1ro de Mayo</title>
+    <link rel="stylesheet" href="contacto.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Partículas animadas -->
+    <div class="particles" id="particles"></div>
+
+    <nav class="navbar" id="navbar">
+      <div class="navbar-container">
+        <span class="navbar-title">Navegación</span>
+         <div class="navbar-buttons">
+  <button data-page="inicio" class="nav-btn">
+    <img src="Imagenes/31.png" alt="Inicio" style="height: 1.5rem; vertical-align: middle; margin-right: 0.5rem;">
+    Inicio
+  </button>
+  <button data-page="modelado_3D" class="nav-btn">
+    <img src="Imagenes/26.png" alt="Modelo 3D" style="height: 1.5rem; vertical-align: middle; margin-right: 0.5rem;">
+    Modelo 3D
+  </button>
+  <button data-page="ubicacion" class="nav-btn">
+    <img src="Imagenes/28.png" alt="Ubicación" style="height: 1.5rem; vertical-align: middle; margin-right: 0.5rem;">
+    Ubicación
+  </button>
+  <button data-page="historia" class="nav-btn">
+    <img src="Imagenes/30.png" alt="Historia" style="height: 1.5rem; vertical-align: middle; margin-right: 0.5rem;">
+    Historia
+  </button>
+  <button data-page="galeria" class="nav-btn">
+    <img src="Imagenes/27.png" alt="Galería" style="height: 1.5rem; vertical-align: middle; margin-right: 0.5rem;">
+    Galería
+  </button>
+  <button data-page="contacto" class="nav-btn">
+    <img src="Imagenes/29.png" alt="Contacto" style="height: 1.5rem; vertical-align: middle; margin-right: 0.5rem;">
+    Contacto
+  </button>
+</div>
+      </div>
+    </nav>
+
+    <main class="main-content">
+      <section class="history-section" id="formulario">
+        <h2>📜 Comparte Tu Historia</h2>
+        
+        <div class="formulario-contenedor">
+          <form id="contactForm" class="glass-form" novalidate>
+            <div class="form-group">
+              <div class="campo">
+                <label for="name">👤 Nombre:</label>
+                <input 
+                  type="text" 
+                  id="name" 
+                  name="name" 
+                  required 
+                  placeholder="Tu nombre completo"
+                  class="glass-input"
+                />
+              </div>
+              
+              <div class="campo">
+                <label for="email">✉️ Correo Electrónico:</label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  required 
+                  placeholder="tucorreo@ejemplo.com"
+                  class="glass-input"
+                />
+              </div>
+              
+              <div class="campo">
+                <label for="message">📖 Tu Historia o Aporte:</label>
+                <textarea 
+                  id="message" 
+                  name="message" 
+                  rows="6" 
+                  required
+                  placeholder="Cuéntanos tus recuerdos, anécdotas o comparte información histórica..."
+                  class="glass-textarea"
+                ></textarea>
+              </div>
+              
+              <div class="campo">
+                <label for="photos">🖼️ Fotos (opcional):</label>
+                <input 
+                  type="file" 
+                  id="photos" 
+                  name="photos" 
+                  multiple
+                  accept="image/*"
+                  class="glass-file-input"
+                />
+              </div>
+              
+              <button type="submit" class="submit-btn">
+                <span class="btn-icon"></span>Enviar Aporte
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <img src="https://cdn.glitch.global/6560f157-1f37-4242-9d97-edc2228dad93/19.jpg?v=1748299003720" 
+           alt="Imagen de fondo" 
+           class="footer-bg-image">
+      <div class="footer-container">
+        <p>
+          &copy; 2025 Piscina Olímpica 1ro de Mayo - Catavi. Todos los derechos
+          reservados.
+        </p>
+        <p><strong>UNSXX - Walter Inca Vasquez</strong></p>
+        <div class="footer-links">
+          <a href="#">
+            <img src="https://cdn.glitch.global/6560f157-1f37-4242-9d97-edc2228dad93/15f.png?v=1748298580486"
+                 alt="Facebook" width="20" />
+            Facebook
+          </a>
+          <a href="#">
+            <img src="https://cdn.glitch.global/6560f157-1f37-4242-9d97-edc2228dad93/16i.png?v=1748298587348"
+                 alt="Instagram" width="20" />
+            Instagram
+          </a>
+          <a href="#">
+            <img src="https://cdn.glitch.global/6560f157-1f37-4242-9d97-edc2228dad93/17y.png?v=1748298594309"
+                 alt="YouTube" width="20" />
+            YouTube
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Three.js CDN para posibles efectos -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="contacto.js"></script>
+  </body>
+</html>
