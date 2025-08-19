@@ -5,45 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Historia - Piscina Olímpica</title>
     <link rel="stylesheet" href="historia.css">
-    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Cargar primero model-viewer -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
   </head>
   <body>
+    <!-- Modelo 3D -->
+    <model-viewer src="book_inkwell_and_fountain_pen..glb" 
+                  ar 
+                  ar-modes="webxr scene-viewer quick-look" 
+                  camera-controls 
+                  tone-mapping="neutral" 
+                  poster="poster.webp" 
+                  shadow-intensity="1">
+      <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">
+        <span>Ver en tu espacio</span>
+      </button>
+      <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png" alt="AR prompt">
+      </div>
+    </model-viewer>
+
     <!-- Partículas animadas -->
-     
     <div class="particles" id="particles"></div>
 
+    <!-- Navbar -->
     <nav class="navbar">
       <div class="navbar-container">
         <span class="navbar-title">Navegación</span>
-         <div class="navbar-buttons">
-  <button data-page="inicio" class="nav-btn">
-    <img src="Imagenes/31.png" alt="Inicio" style="height: 1.5rem; vertical-align: middle; margin-right: 0.5rem;">
-    Inicio
-  </button>
-  <button data-page="modelado_3D" class="nav-btn">
-    <img src="Imagenes/26.png" alt="Modelo 3D" style="height: 1.5rem; vertical-align: middle; margin-right: 0.5rem;">
-    Modelo 3D
-  </button>
-  <button data-page="ubicacion" class="nav-btn">
-    <img src="Imagenes/28.png" alt="Ubicación" style="height: 1.5rem; vertical-align: middle; margin-right: 0.5rem;">
-    Ubicación
-  </button>
-  <button data-page="historia" class="nav-btn">
-    <img src="Imagenes/30.png" alt="Historia" style="height: 1.5rem; vertical-align: middle; margin-right: 0.5rem;">
-    Historia
-  </button>
-  <button data-page="galeria" class="nav-btn">
-    <img src="Imagenes/27.png" alt="Galería" style="height: 1.5rem; vertical-align: middle; margin-right: 0.5rem;">
-    Galería
-  </button>
-  <button data-page="contacto" class="nav-btn">
-    <img src="Imagenes/29.png" alt="Contacto" style="height: 1.5rem; vertical-align: middle; margin-right: 0.5rem;">
-    Contacto
-  </button>
-</div>
+        <div class="navbar-buttons">
+          <button data-page="inicio" class="nav-btn">
+            <img src="Imagenes/31.png" alt="Inicio" style="height: 1.5rem; vertical-align: middle; margin-right: 0.5rem;">
+            Inicio
+          </button>
+          <button data-page="modelado_3D" class="nav-btn">
+            <img src="Imagenes/26.png" alt="Modelo 3D" style="height: 1.5rem; vertical-align: middle; margin-right: 0.5rem;">
+            Modelo 3D
+          </button>
+          <button data-page="ubicacion" class="nav-btn">
+            <img src="Imagenes/28.png" alt="Ubicación" style="height: 1.5rem; vertical-align: middle; margin-right: 0.5rem;">
+            Ubicación
+          </button>
+          <button data-page="historia" class="nav-btn">
+            <img src="Imagenes/30.png" alt="Historia" style="height: 1.5rem; vertical-align: middle; margin-right: 0.5rem;">
+            Historia
+          </button>
+          <button data-page="galeria" class="nav-btn">
+            <img src="Imagenes/27.png" alt="Galería" style="height: 1.5rem; vertical-align: middle; margin-right: 0.5rem;">
+            Galería
+          </button>
+          <button data-page="contacto" class="nav-btn">
+            <img src="Imagenes/29.png" alt="Contacto" style="height: 1.5rem; vertical-align: middle; margin-right: 0.5rem;">
+            Contacto
+          </button>
+        </div>
       </div>
     </nav>
 
+    <!-- Contenido principal -->
     <main class="main-content">
       <h2>Nuestra Historia en el Tiempo</h2>
       <p class="subtitle">
@@ -52,7 +73,6 @@
       </p>
       
       <div class="timeline-container">
-        <!-- Línea del tiempo -->
         <div class="timeline-line"></div>
         
         <!-- Evento 1 -->
@@ -158,36 +178,34 @@
       </div>
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
       <img src="https://cdn.glitch.global/6560f157-1f37-4242-9d97-edc2228dad93/19.jpg?v=1748299003720" 
            alt="Imagen de fondo" 
            class="footer-bg-image">
       <div class="footer-container">
         <p>
-          &copy; 2025 Piscina Olímpica 1ro de Mayo - Catavi. Todos los derechos
-          reservados.
+          &copy; 2025 Piscina Olímpica 1ro de Mayo - Catavi. Todos los derechos reservados.
         </p>
         <p><strong>UNSXX - Walter Inca Vasquez</strong></p>
         <div class="footer-links">
           <a href="#">
-            <img src="https://cdn.glitch.global/6560f157-1f37-4242-9d97-edc2228dad93/15f.png?v=1748298580486"
-                 alt="Facebook" width="20" />
+            <img src="https://cdn.glitch.global/6560f157-1f37-4242-9d97-edc2228dad93/15f.png?v=1748298580486" alt="Facebook" width="20" />
             Facebook
           </a>
           <a href="#">
-            <img src="https://cdn.glitch.global/6560f157-1f37-4242-9d97-edc2228dad93/16i.png?v=1748298587348"
-                 alt="Instagram" width="20" />
+            <img src="https://cdn.glitch.global/6560f157-1f37-4242-9d97-edc2228dad93/16i.png?v=1748298587348" alt="Instagram" width="20" />
             Instagram
           </a>
           <a href="#">
-            <img src="https://cdn.glitch.global/6560f157-1f37-4242-9d97-edc2228dad93/17y.png?v=1748298594309"
-                 alt="YouTube" width="20" />
+            <img src="https://cdn.glitch.global/6560f157-1f37-4242-9d97-edc2228dad93/17y.png?v=1748298594309" alt="YouTube" width="20" />
             YouTube
           </a>
         </div>
       </div>
     </footer>
 
+    <!-- Tu JS -->
     <script src="historia.js"></script>
   </body>
 </html>
