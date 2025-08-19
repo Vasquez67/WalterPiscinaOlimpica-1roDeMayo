@@ -417,7 +417,7 @@ body {
 
 .main-content {
   max-width: 1000px;
-  margin: 9rem auto;
+  margin: -6rem auto;
   padding: 3rem;
   background: var(--overlay-dark);
   backdrop-filter: blur(15px);
@@ -737,4 +737,20 @@ body {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+}
+/* Estilos para el modelo 3D */
+model-viewer {
+  width: 1000px;          /* Ancho fijo del modelo */
+  height: 900px;         /* Alto fijo del modelo */
+  margin: 40px auto;     /* Centrado horizontal y separación superior */
+  display: block;
+  border-radius: 20px;       /* Esquinas redondeadas */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Sombra elegante */
+}
+model-viewer {
+  width: 100%;
+  max-width: 800px;   /* límite máximo */
+  height: 500px;
+  margin: -50px auto;
+  display: block;
 }
