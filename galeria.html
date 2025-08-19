@@ -1,21 +1,40 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galería - Piscina Olímpica</title>
     <link rel="stylesheet" href="galeria.css">
-    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  </head>
-  <body>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+</head>
+
+<body>
+     <!-- Modelo 3D -->
+    <model-viewer src="camara__de_fotos_reflex_dslr_zenit.glb" 
+                  ar 
+                  ar-modes="webxr scene-viewer quick-look" 
+                  camera-controls 
+                  tone-mapping="neutral" 
+                  poster="poster.webp" 
+                  shadow-intensity="1">
+      <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">
+        <span>Ver en tu espacio</span>
+      </button>
+      <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png" alt="AR prompt">
+      </div>
+    </model-viewer>
     <!-- Partículas animadas -->
     <div class="particles" id="particles"></div>
 
-    <nav class="navbar">
-      <div class="navbar-container">
-        <span class="navbar-title">Navegación</span>
-         <div class="navbar-buttons">
-  <button data-page="inicio" class="nav-btn">
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <span class="navbar-title">Navegación</span>
+            <div class="navbar-buttons">
+                <button data-page="inicio" class="nav-btn">
     <img src="Imagenes/31.png" alt="Inicio" style="height: 1.5rem; vertical-align: middle; margin-right: 0.5rem;">
     Inicio
   </button>
@@ -39,58 +58,85 @@
     <img src="Imagenes/29.png" alt="Contacto" style="height: 1.5rem; vertical-align: middle; margin-right: 0.5rem;">
     Contacto
   </button>
-</div>
-      </div>
+            </div>
+        </div>
     </nav>
 
     <main class="main-content">
-      <h2>Galería Olímpica</h2>
-      <p class="subtitle">
-        Revive los momentos históricos y las vistas más impresionantes de nuestra piscina olímpica.
-      </p>
-      
-      <div class="gallery-container" id="gallery">
-        <!-- Las imágenes se insertarán aquí dinámicamente -->
-      </div>
-      
-      <!-- Modal para vista ampliada -->
-      <div class="modal" id="imageModal">
-        <span class="close-btn" id="closeModal">&times;</span>
-        <img class="modal-content" id="modalImage">
-        <div class="caption" id="modalCaption"></div>
-      </div>
+        <h2>Galería Olímpica</h2>
+        <p class="subtitle">
+            Revive los momentos históricos y las vistas más impresionantes de nuestra piscina olímpica.
+        </p>
+        
+        <!-- Carrusel de imágenes -->
+        <div class="carousel-container">
+            <div class="carousel" id="carousel">
+                <!-- Las imágenes se insertarán aquí dinámicamente -->
+            </div>
+            
+            <!-- Controles del carrusel -->
+            <button class="carousel-control prev" id="prevBtn">
+                &#10094;
+            </button>
+            <button class="carousel-control next" id="nextBtn">
+                &#10095;
+            </button>
+            
+            <!-- Indicadores -->
+            <div class="carousel-indicators" id="indicators"></div>
+        </div>
+        
+        <!-- Modal para vista ampliada -->
+        <div class="modal" id="imageModal">
+            <span class="close-btn" id="closeModal">&times;</span>
+            <img class="modal-content" id="modalImage">
+            <div class="caption" id="modalCaption"></div>
+            
+            <!-- Controles en el modal -->
+            <button class="modal-control prev" id="modalPrevBtn">&#10094;</button>
+            <button class="modal-control next" id="modalNextBtn">&#10095;</button>
+        </div>
     </main>
 
     <footer class="footer">
-      <img src="https://cdn.glitch.global/6560f157-1f37-4242-9d97-edc2228dad93/19.jpg?v=1748299003720" 
-           alt="Imagen de fondo" 
-           class="footer-bg-image">
-      <div class="footer-container">
-        <p>
-          &copy; 2025 Piscina Olímpica 1ro de Mayo - Catavi. Todos los derechos
-          reservados.
-        </p>
-        <p><strong>UNSXX - Walter Inca Vasquez</strong></p>
-        <div class="footer-links">
-          <a href="#">
-            <img src="https://cdn.glitch.global/6560f157-1f37-4242-9d97-edc2228dad93/15f.png?v=1748298580486"
-                 alt="Facebook" width="20" />
-            Facebook
-          </a>
-          <a href="#">
-            <img src="https://cdn.glitch.global/6560f157-1f37-4242-9d97-edc2228dad93/16i.png?v=1748298587348"
-                 alt="Instagram" width="20" />
-            Instagram
-          </a>
-          <a href="#">
-            <img src="https://cdn.glitch.global/6560f157-1f37-4242-9d97-edc2228dad93/17y.png?v=1748298594309"
-                 alt="YouTube" width="20" />
-            YouTube
-          </a>
+        <img src="https://cdn.glitch.global/6560f157-1f37-4242-9d97-edc2228dad93/19.jpg?v=1748299003720" 
+             alt="Imagen de fondo" 
+             class="footer-bg-image">
+        <div class="footer-container">
+            <p>
+                &copy; 2025 Piscina Olímpica 1ro de Mayo - Catavi. Todos los derechos
+                reservados.
+            </p>
+            <p><strong>UNSXX - Walter Inca Vasquez</strong></p>
+            <div class="footer-links">
+                <a href="#">
+                    <img src="https://cdn.glitch.global/6560f157-1f37-4242-9d97-edc2228dad93/15f.png?v=1748298580486"
+                         alt="Facebook" width="20" />
+                    Facebook
+                </a>
+                <a href="#">
+                    <img src="https://cdn.glitch.global/6560f157-1f37-4242-9d97-edc2228dad93/16i.png?v=1748298587348"
+                         alt="Instagram" width="20" />
+                    Instagram
+                </a>
+                <a href="#">
+                    <img src="https://cdn.glitch.global/6560f157-1f37-4242-9d97-edc2228dad93/17y.png?v=1748298594309"
+                         alt="YouTube" width="20" />
+                    YouTube
+                </a>
+            </div>
         </div>
-      </div>
     </footer>
-
+    
     <script src="galeria.js"></script>
-  </body>
+    <section class="model-3d-section" style="display: none;">
+        <div class="model-container">
+            <div id="model-viewer"></div>
+            <div class="model-controls">
+                <button id="rotate-toggle">Rotación Automática</button>
+                <button id="reset-view">Restablecer Vista</button>
+            </div>
+        </div>
+    </section>
+</body>
 </html>
