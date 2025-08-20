@@ -5,67 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galería - Piscina Olímpica</title>
     <link rel="stylesheet" href="galeria.css">
-    <!-- Cargar model-viewer -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 </head>
 
 <body>
-    <!-- Modelo 3D -->
-    <model-viewer src="camara_de_fotos_reflex_dslr_zenit.glb" 
+     <!-- Modelo 3D -->
+    <model-viewer src="camara__de_fotos_reflex_dslr_zenit.glb" 
                   ar 
                   ar-modes="webxr scene-viewer quick-look" 
                   camera-controls 
                   tone-mapping="neutral" 
                   poster="poster.webp" 
                   shadow-intensity="1">
-        <div class="progress-bar hide" slot="progress-bar">
-            <div class="update-bar"></div>
-        </div>
-        <button slot="ar-button" id="ar-button">
-            <span>Ver en tu espacio</span>
-        </button>
-        <div id="ar-prompt">
-            <img src="https://modelviewer.dev/shared-assets/icons/hand.png" alt="AR prompt">
-        </div>
+      <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">
+        <span>Ver en tu espacio</span>
+      </button>
+      <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png" alt="AR prompt">
+      </div>
     </model-viewer>
-
     <!-- Partículas animadas -->
     <div class="particles" id="particles"></div>
 
-    <!-- Barra de navegación -->
     <nav class="navbar" id="navbar">
         <div class="navbar-container">
             <span class="navbar-title">Navegación</span>
             <div class="navbar-buttons">
                 <button data-page="inicio" class="nav-btn">
-                    <img src="Imagenes/31.png" alt="Inicio" style="height: 1.5rem; margin-right: 0.5rem;">
-                    Inicio
-                </button>
-                <button data-page="modelado_3D" class="nav-btn">
-                    <img src="Imagenes/26.png" alt="Modelo 3D" style="height: 1.5rem; margin-right: 0.5rem;">
-                    Modelo 3D
-                </button>
-                <button data-page="ubicacion" class="nav-btn">
-                    <img src="Imagenes/28.png" alt="Ubicación" style="height: 1.5rem; margin-right: 0.5rem;">
-                    Ubicación
-                </button>
-                <button data-page="historia" class="nav-btn">
-                    <img src="Imagenes/30.png" alt="Historia" style="height: 1.5rem; margin-right: 0.5rem;">
-                    Historia
-                </button>
-                <button data-page="galeria" class="nav-btn">
-                    <img src="Imagenes/27.png" alt="Galería" style="height: 1.5rem; margin-right: 0.5rem;">
-                    Galería
-                </button>
-                <button data-page="contacto" class="nav-btn">
-                    <img src="Imagenes/29.png" alt="Contacto" style="height: 1.5rem; margin-right: 0.5rem;">
-                    Contacto
-                </button>
+    <img src="Imagenes/31.png" alt="Inicio" style="height: 1.5rem; vertical-align: middle; margin-right: 0.5rem;">
+    Inicio
+  </button>
+  <button data-page="modelado_3D" class="nav-btn">
+    <img src="Imagenes/26.png" alt="Modelo 3D" style="height: 1.5rem; vertical-align: middle; margin-right: 0.5rem;">
+    Modelo 3D
+  </button>
+  <button data-page="ubicacion" class="nav-btn">
+    <img src="Imagenes/28.png" alt="Ubicación" style="height: 1.5rem; vertical-align: middle; margin-right: 0.5rem;">
+    Ubicación
+  </button>
+  <button data-page="historia" class="nav-btn">
+    <img src="Imagenes/30.png" alt="Historia" style="height: 1.5rem; vertical-align: middle; margin-right: 0.5rem;">
+    Historia
+  </button>
+  <button data-page="galeria" class="nav-btn">
+    <img src="Imagenes/27.png" alt="Galería" style="height: 1.5rem; vertical-align: middle; margin-right: 0.5rem;">
+    Galería
+  </button>
+  <button data-page="contacto" class="nav-btn">
+    <img src="Imagenes/29.png" alt="Contacto" style="height: 1.5rem; vertical-align: middle; margin-right: 0.5rem;">
+    Contacto
+  </button>
             </div>
         </div>
     </nav>
 
-    <!-- Contenido principal -->
     <main class="main-content">
         <h2>Galería Olímpica</h2>
         <p class="subtitle">
@@ -74,11 +70,17 @@
         
         <!-- Carrusel de imágenes -->
         <div class="carousel-container">
-            <div class="carousel" id="carousel"></div>
+            <div class="carousel" id="carousel">
+                <!-- Las imágenes se insertarán aquí dinámicamente -->
+            </div>
             
             <!-- Controles del carrusel -->
-            <button class="carousel-control prev" id="prevBtn">&#10094;</button>
-            <button class="carousel-control next" id="nextBtn">&#10095;</button>
+            <button class="carousel-control prev" id="prevBtn">
+                &#10094;
+            </button>
+            <button class="carousel-control next" id="nextBtn">
+                &#10095;
+            </button>
             
             <!-- Indicadores -->
             <div class="carousel-indicators" id="indicators"></div>
@@ -87,7 +89,7 @@
         <!-- Modal para vista ampliada -->
         <div class="modal" id="imageModal">
             <span class="close-btn" id="closeModal">&times;</span>
-            <img class="modal-content" id="modalImage" alt="Vista ampliada">
+            <img class="modal-content" id="modalImage">
             <div class="caption" id="modalCaption"></div>
             
             <!-- Controles en el modal -->
@@ -96,24 +98,15 @@
         </div>
     </main>
 
-    <!-- Sección de modelo extra -->
-    <section class="model-3d-section" style="display: none;">
-        <div class="model-container">
-            <div id="extra-model-viewer"></div>
-            <div class="model-controls">
-                <button id="rotate-toggle">Rotación Automática</button>
-                <button id="reset-view">Restablecer Vista</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
     <footer class="footer">
         <img src="https://cdn.glitch.global/6560f157-1f37-4242-9d97-edc2228dad93/19.jpg?v=1748299003720" 
              alt="Imagen de fondo" 
              class="footer-bg-image">
         <div class="footer-container">
-            <p>&copy; 2025 Piscina Olímpica 1ro de Mayo - Catavi. Todos los derechos reservados.</p>
+            <p>
+                &copy; 2025 Piscina Olímpica 1ro de Mayo - Catavi. Todos los derechos
+                reservados.
+            </p>
             <p><strong>UNSXX - Walter Inca Vasquez</strong></p>
             <div class="footer-links">
                 <a href="#">
@@ -134,8 +127,7 @@
             </div>
         </div>
     </footer>
-
-    <!-- JS -->
+    
     <script src="galeria.js"></script>
 </body>
 </html>
