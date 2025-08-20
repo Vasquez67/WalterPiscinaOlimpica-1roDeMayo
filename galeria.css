@@ -395,7 +395,7 @@ body {
     overflow: hidden;
     color: white;
     padding: 3rem 2rem;
-    margin-top: -4rem;
+    margin-top: 8rem;
     text-align: center;
     background: var(--overlay-dark);
     backdrop-filter: blur(15px);
