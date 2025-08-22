@@ -417,8 +417,9 @@ body {
 
 .main-content {
   max-width: 1000px;
-  margin: 9rem auto;
+  margin: -3rem auto;
   padding: 3rem;
+  height: 770px; /* fijo */
   background: var(--overlay-dark);
   backdrop-filter: blur(15px);
   border-radius: 20px;
@@ -488,7 +489,7 @@ body {
   overflow: hidden;
   color: white;
   padding: 3rem 2rem;
-  margin-top: -4rem;
+  margin-top: 7rem;
   text-align: center;
   background: var(--overlay-dark);
   backdrop-filter: blur(15px);
@@ -571,17 +572,7 @@ body {
     padding: 2rem 1.5rem;
   }
   
-  .model-3d-section {
-    margin: 2rem 1rem;
-    padding: 1.5rem;
-  }
-  
-  .model-3d-container {
-    height: 60vh;
-    min-height: 400px;
-  }
 }
-
 /* Scrollbar personalizada */
 ::-webkit-scrollbar {
   width: 8px;
@@ -618,31 +609,21 @@ body {
 
 .mapa-container {
   width: 100%;
-  height: 85%;
-  background: var(--glass-bg);
-  backdrop-filter: blur(10px);
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: var(--shadow-soft);
-}
-
-.model-3d-container {
-  width: 100%;
   height: 100%;
   background: var(--glass-bg);
   backdrop-filter: blur(10px);
   border-radius: 15px;
   overflow: hidden;
   box-shadow: var(--shadow-soft);
-  position: relative;
 }
+
 
 .contacto-info {
   background: var(--glass-bg);
   backdrop-filter: blur(10px);
   border-radius: 15px;
   padding: 2rem;
-  margin-top: 2rem;
+  margin-top: 0rem;
   box-shadow: var(--shadow-soft);
 }
 
@@ -662,8 +643,9 @@ body {
   padding: 1.5rem;
   border-radius: 10px;
   transition: all 0.3s ease;
-  
+  max-height: 115px;   /* altura máxima */
 }
+
 
 .info-card:hover {
   transform: translateY(-5px);
