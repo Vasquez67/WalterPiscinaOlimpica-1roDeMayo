@@ -685,9 +685,6 @@ model-viewer {
   display: block;
   border-radius: 20px;
 }
-
-/* En pantallas pequeñas */
-@media (max-width: 768px) {
   model-viewer {
   width: 100%;
   max-width: 400px;   /* límite máximo */
