@@ -678,19 +678,16 @@ body {
 }
 /* Estilos para el modelo 3D */
 model-viewer {
-  width: 100%;
-  max-width: 1000px;   /* en desktop */
-  height: 900px;
-  margin: 40px auto;
+  width: 1000px;          /* Ancho fijo del modelo */
+  height: 900px;         /* Alto fijo del modelo */
+  margin: 40px auto;     /* Centrado horizontal y separación superior */
   display: block;
-  border-radius: 20px;
+  border-radius: 20px;       /* Esquinas redondeadas */
 }
-  model-viewer {
+model-viewer {
   width: 100%;
   max-width: 400px;   /* límite máximo */
   height: 500px;
   margin: -10px auto;
   display: block;
-  }
-
-
+}
