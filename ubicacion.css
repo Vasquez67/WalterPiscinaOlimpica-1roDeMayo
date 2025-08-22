@@ -689,9 +689,11 @@ model-viewer {
 /* En pantallas pequeñas */
 @media (max-width: 768px) {
   model-viewer {
-    max-width: 400px;
-    height: 500px;
-    margin: 20px auto;
+  width: 100%;
+  max-width: 400px;   /* límite máximo */
+  height: 500px;
+  margin: -10px auto;
+  display: block;
   }
-}
+
 
