@@ -8,6 +8,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   </head>
   <body>
+     <!-- Modelo 3D -->
+    <model-viewer src="Ubicación.glb" 
+                  ar 
+                  ar-modes="webxr scene-viewer quick-look" 
+                  camera-controls 
+                  tone-mapping="neutral" 
+                  poster="poster.webp" 
+                  shadow-intensity="1">
+      <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">
+        <span>Ver en tu espacio</span>
+      </button>
+      <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png" alt="AR prompt">
+      </div>
+    </model-viewer>
     <!-- Partículas animadas -->
     <div class="particles" id="particles"></div>
 
