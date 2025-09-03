@@ -6,8 +6,27 @@
     <title>Modelo 3D - Piscina Olímpica</title>
     <link rel="stylesheet" href="madelado_3D.css">
     <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
   </head>
   <body>
+    <!-- Modelo 3D -->
+    <model-viewer src="modelo3DP.glb" 
+                  ar 
+                  ar-modes="webxr scene-viewer quick-look" 
+                  camera-controls 
+                  tone-mapping="neutral" 
+                  poster="poster.webp" 
+                  shadow-intensity="1">
+      <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">
+        <span>Ver en tu espacio</span>
+      </button>
+      <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png" alt="AR prompt">
+      </div>
+    </model-viewer>
     <!-- Partículas animadas -->
     <div class="particles" id="particles"></div>
 
@@ -44,25 +63,6 @@
       </div>
     </nav>
 
-    <main class="main-content">
-      <h2>Modelo 3D Interactivo</h2>
-      <p>
-        Explora este modelo 3D que demuestra conceptos de jerarquía y transformaciones.
-        Observa cómo los objetos se relacionan y se transforman en tiempo real.
-      </p>
-      
-      <div class="model-3d-container" id="threejs-container">
-        <div class="loading-screen" id="loadingScreen">
-          <div class="loading-spinner"></div>
-          <p>Cargando modelo 3D interactivo...</p>
-        </div>
-      </div>
-      
-      <div class="model-controls">
-        <button class="control-btn" id="toggleAnimation">Pausar Animación</button>
-        <button class="control-btn" id="resetCamera">Resetear Vista</button>
-      </div>
-    </main>
 
     <footer class="footer">
       <img src="https://cdn.glitch.global/6560f157-1f37-4242-9d97-edc2228dad93/19.jpg?v=1748299003720" 
