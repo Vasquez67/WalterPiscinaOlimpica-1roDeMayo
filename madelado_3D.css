@@ -599,20 +599,11 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--secondary-blue);
 }
-/* Estilos para el modelo 3D */
-model-viewer {
-  width: 1000px;      /* ancho más grande */
-  height: 1000px;     /* alto más grande */
-  margin: 20px auto;  /* centrado */
-  display: block;
-  border-radius: 20px;
-}
-
 model-viewer {
   width: 100%;
-  max-width: 1800px;   /* límite máximo bien grande */
-  height: 1000px;      /* alto más grande */
-  margin: 20px auto;
+  max-width: 1200px;
+  height: 900px;
+  margin: 20px auto 0 auto; /* 20px de separación superior, 0 de inferior */
   display: block;
   border-radius: 20px;
 }
